@@ -1,0 +1,329 @@
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #e0e7ff, #f5f3ff, #fce7f3);
+  color: #1f2937;
+  min-height: 100vh;
+  padding: 30px 15px;
+  line-height: 1.6;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* =========================
+   PROFILE CARD
+========================= */
+
+.profile-card {
+  width: 100%;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 22px;
+  box-shadow: 0 12px 35px rgba(55, 48, 163, 0.12);
+  border: 1px solid #ede9fe;
+}
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.profile-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px;
+  border: 5px solid #8b5cf6;
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   PROFILE HEADER
+========================= */
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 25px;
+  padding: 20px 10px;
+  background: linear-gradient(135deg, #f5f3ff, #faf5ff);
+  border-radius: 16px;
+}
+
+h1 {
+  color: #5b21b6;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h2 {
+  color: #6d28d9;
+  font-size: 22px;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+h3 {
+  color: #7c3aed;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   PARAGRAPHS
+========================= */
+
+p {
+  color: #4b5563;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(124, 58, 237, 0.2);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #6d28d9, #5b21b6);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(124, 58, 237, 0.3);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* =========================
+   PROFILE SECTIONS
+========================= */
+
+.section,
+.profile-details,
+.profile-info,
+.about-section,
+.skills-section,
+.contact-section {
+  background: #faf9ff;
+  padding: 22px;
+  margin: 20px 0;
+  border-radius: 14px;
+  border: 1px solid #ede9fe;
+  text-align: left;
+  transition: background 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.section:hover,
+.profile-details:hover,
+.profile-info:hover,
+.about-section:hover,
+.skills-section:hover,
+.contact-section:hover {
+  background: #f5f3ff;
+  box-shadow: 0 5px 15px rgba(109, 40, 217, 0.08);
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section p,
+.section p {
+  font-size: 15px;
+  color: #4b5563;
+}
+
+/* =========================
+   PROFILE DETAILS
+========================= */
+
+.profile-details p,
+.profile-info p {
+  margin: 10px 0;
+  overflow-wrap: anywhere;
+}
+
+.profile-details strong,
+.profile-info strong {
+  color: #5b21b6;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-section ul,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.skills-section li,
+li {
+  padding: 9px 14px;
+  margin: 8px 0;
+  background: #ede9fe;
+  border-radius: 8px;
+  color: #5b21b6;
+  font-size: 14px;
+}
+
+/* =========================
+   ACHIEVEMENTS
+========================= */
+
+.section h2 {
+  border-bottom: 2px solid #ddd6fe;
+  padding-bottom: 10px;
+}
+
+.section p {
+  background: #ffffff;
+  padding: 10px 14px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border-left: 4px solid #8b5cf6;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section a,
+a {
+  color: #7c3aed;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 0.3s ease;
+}
+
+.contact-section a:hover,
+a:hover {
+  color: #5b21b6;
+  text-decoration: underline;
+}
+
+/* =========================
+   IMAGES
+========================= */
+
+img {
+  max-width: 100%;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .profile-card {
+    padding: 24px 18px;
+  }
+
+  .profile-image {
+    width: 135px;
+    height: 135px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .section,
+  .profile-details,
+  .profile-info,
+  .about-section,
+  .skills-section,
+  .contact-section {
+    padding: 16px;
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px 8px;
+  }
+
+  .profile-card {
+    padding: 18px 12px;
+    border-radius: 15px;
+  }
+
+  .profile-image {
+    width: 115px;
+    height: 115px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 220px;
+    padding: 11px 16px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+}
