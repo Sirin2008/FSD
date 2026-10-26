@@ -1,24 +1,43 @@
 import { useState } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [task, setTask] = useState('');
+  const [tasks, setTasks] = useState([]);
+
+  const addTask = () => {
+    if (task.trim() !== '') {
+      setTasks([...tasks, task]);
+      setTask('');
+    }
+  };
+
+  const deleteTask = (index) => {
+    setTasks(tasks.filter((_, i) => i !== index));
+  };
 
   return (
     <div>
-      <h1>State Management using React Hooks</h1>
-      <h2>Count: {count}</h2>
+      <h1>Dynamic To-Do List</h1>
 
-      <button onClick={() => setCount(count + 1)}>
-        Increment
-      </button>
+      <input
+        type="text"
+        placeholder="Enter a task"
+        value={task}
+        onChange={(e) => setTask(e.target.value)}
+      />
 
-      <button onClick={() => setCount(count - 1)}>
-        Decrement
-      </button>
+      <button onClick={addTask}>Add Task</button>
 
-      <button onClick={() => setCount(0)}>
-        Reset
-      </button>
+      <ul>
+        {tasks.map((item, index) => (
+          <li key={index}>
+            {item}{' '}
+            <button onClick={() => deleteTask(index)}>
+              Delete
+            </button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
